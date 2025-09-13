@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aviso de Estafa — Itaú</title>
+  <style>
+    /* Estilos simples y auto-contenidos (solo HTML + CSS) */
+    :root{
+      --bg:#0f1724; /* fondo oscuro */
+      --card:#0b1220;
+      --accent:#ff5252; /* rojo para advertencia */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --danger: #ffdddd;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      background: linear-gradient(180deg,#071025 0%, var(--bg) 100%);
+      display:flex;align-items:center;justify-content:center;padding:24px;color:#e6eef8;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+    .card{
+      width:100%;max-width:720px;background:linear-gradient(180deg,var(--card), rgba(8,12,18,0.6));
+      border-radius:14px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+    .flag{
+      display:flex;align-items:center;gap:16px;margin-bottom:6px;
+    }
+    .icon{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ff7a7a);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;color:white;box-shadow:0 6px 18px rgba(255,82,82,0.16);
+    }
+    h1{font-size:20px;margin:0 0 6px 0}
+    p.lead{margin:0;color:var(--muted);font-size:15px}
+
+    .notice{
+      margin-top:18px;padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(255,82,82,0.06), rgba(255,82,82,0.03));border:1px solid rgba(255,82,82,0.12);
+      display:flex;gap:12px;align-items:flex-start
+    }
+    .notice strong{display:block;color:var(--accent);font-size:16px}
+    .details{font-size:14px;color:#eaf1ff}
+
+    .help{
+      margin-top:18px;padding:14px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px;line-height:1.45
+    }
+
+    .actions{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;font-weight:600;font-size:13px;cursor:pointer;display:inline-block
+    }
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff7a7a);color:#071124;border:none}
+    .small{font-size:12px;padding:8px 10px}
+
+    footer{margin-top:20px;color:var(--muted);font-size:12px}
+
+    @media (max-width:520px){
+      .icon{width:48px;height:48px;font-size:18px}
+      .card{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="flag">
+      <div class="icon">!</div>
+      <div>
+        <h1>ERROR — Número no corresponde a trabajadores de Itaú</h1>
+        <p class="lead">Hemos verificado que el número que te contactó <strong>no</strong> pertenece a personal autorizado de Itaú. ¡Posible intento de estafa!</p>
+      </div>
+    </div>
+
+    <div class="notice" role="status" aria-live="polite">
+      <div style="width:12px;height:12px;border-radius:3px;background:var(--accent);margin-top:6px"></div>
+      <div>
+        <strong>Alerta de estafa</strong>
+        <div class="details">Un estafador podría estar intentando obtener tus datos o dinero haciéndose pasar por el banco. <strong>No compartas</strong> claves, códigos de verificación, contraseñas ni tu número de tarjeta.</div>
+      </div>
+    </div>
+
+    <div class="help">
+      ¿Qué hacer ahora?<br>
+      • No respondas a mensajes que pidan códigos o pagos.
+      • No hagas transferencias ni compartas información sensible.
+      • Bloquea el número y captura la conversación (si es posible).
+      • Contacta al soporte oficial de Itaú desde su web o número publicado en su sitio antes de tomar cualquier acción.
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="#" onclick="return false" aria-disabled="true">¡Esto es una estafa!</a>
+      <span class="btn small">Bloquear número</span>
+      <span class="btn small">Reportar a tu banco</span>
+    </div>
+
+    <footer>
+      Este aviso es informativo. Si recibiste un contacto sospechoso desde un número que afirma ser del banco, verifica siempre por canales oficiales.
+    </footer>
+  </main>
+</body>
+</html>
